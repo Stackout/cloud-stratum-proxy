@@ -15,8 +15,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build
       run: |
-        cargo build --verbose
-        zip --junk-paths stratum-cloud-proxy /target/release/cloud-stratum-proxy
+        cargo build --verbose --release
+        zip --junk-paths stratum-cloud-proxy ./target/release/cloud-stratum-proxy
     - name: Run tests
       run: cargo test --verbose
     - name: Create Release
