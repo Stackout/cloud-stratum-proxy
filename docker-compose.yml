@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  app:
+    image: pexacoin/cloud-stratum-proxy
+    build: .
+    command: [
+      "cloud-stratum-proxy",
+      "-l 4433",
+      "-b 0.0.0.0",
+      "-s stratum.miningforce.org",
+    ]

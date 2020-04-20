@@ -1,0 +1,20 @@
+[package]
+name = "cloud-stratum-proxy"
+version = "0.1.0"
+authors = ["Ryan Hein <me@ryanhein.com>"]
+description = "Cross-platform multi-client TCP proxy"
+homepage = "https://github.com/neosmart/tcpproxy"
+repository = "https://github.com/neosmart/tcpproxy"
+readme = "README.md"
+keywords = ["proxy", "tcp", "networking"]
+categories = ["command-line-utilities", "network-programming"]
+license = "MIT"
+edition = "2018"
+
+[dependencies]
+futures = "0.3"
+getopts = "0.2"
+rand = "0.7"
+tokio = { version = "0.2.18", features = [ "io-util", "macros", "rt-core", "rt-threaded", "tcp", ] }
+tokio-tls = "0.3"
+native-tls = "0.2.4"
